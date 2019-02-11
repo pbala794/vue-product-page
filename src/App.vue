@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="navigation-bar">
+      <Breadcrumbs></Breadcrumbs>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Breadcrumbs from './components/Breadcrumbs'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Breadcrumbs
   }
 }
 </script>
