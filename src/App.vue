@@ -4,6 +4,8 @@
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
           crossorigin="anonymous">
 
+    <InfoMessage v-if="showInfoMessage"></InfoMessage>
+
     <div class="navigation-bar">
       <Breadcrumbs></Breadcrumbs>
     </div>
@@ -16,6 +18,7 @@
 
       <div class="col-second">
         <ProductInfo :product="product"></ProductInfo>
+        <AddToCart :product="product"></AddToCart>
       </div>
     </div>
   </div>
@@ -27,8 +30,11 @@ import Breadcrumbs from './components/Breadcrumbs'
 import Controls from './components/Controls'
 import ImagePreview from './components/ImagePreview'
 import ProductInfo from './components/ProductInfo'
+import AddToCart from './components/AddToCart'
+import InfoMessage from './components/InfoMessage'
 
 import axios from 'axios'
+import { EventBus } from './EventBus.js'
 
 export default {
   name: 'app',
@@ -36,12 +42,15 @@ export default {
     Breadcrumbs,
     Controls,
     ImagePreview,
-    ProductInfo
+    ProductInfo,
+    AddToCart,
+    InfoMessage
   },
   data: () => {
     return {
       product: {},
-      isLoaded: false
+      isLoaded: false,
+      showInfoMessage: false
     }
   },
   created() {
@@ -51,6 +60,13 @@ export default {
         this.isLoaded = true;
       })
       .catch(error => console.log(error))
+
+    EventBus.$on('info-message', () => {
+      this.showInfoMessage = true;
+      setTimeout(() => {
+        this.showInfoMessage = false;
+      }, 4000)
+    });
   }
 }
 </script>
@@ -75,6 +91,7 @@ export default {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
+  margin-bottom: 300px; /* temporary */
   padding: 10px 25px;
   height: 100%;
 }

@@ -16,7 +16,7 @@
         </div>
 
         <div class="product__price">
-            {{ product.basePriceGross }} {{ product.currency }}
+            {{ productPrice }} {{ product.currency }}
         </div>
 
         <ColorPicker 
@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import { EventBus } from '../EventBus.js'
+
 import ColorPicker from './ColorPicker'
 import SizePicker from './SizePicker'
 
@@ -44,6 +46,31 @@ export default {
             type: Object,
             required: true
         }
+    },
+    data() {
+        return {
+            selectedSizeId: null
+        }
+    },
+    computed: {
+        productPrice() {
+            const sizeAttr = this.product.configurablePrices.filter(attr => {
+                return attr.attributeKey === 'size'
+            });
+
+            const selectedSizePrice = sizeAttr[0].prices.filter(attr => {
+                return attr.attributeId === this.selectedSizeId;
+            });
+
+            const price = selectedSizePrice[0] ? selectedSizePrice[0].priceGross : this.product.basePriceGross;
+
+            return price;
+        }
+    },
+    mounted() {
+        EventBus.$on('size-selected', size => {
+            this.selectedSizeId = size.id;
+        });
     }
 }
 </script>
