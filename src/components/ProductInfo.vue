@@ -19,17 +19,25 @@
             {{ product.basePriceGross }} {{ product.currency }}
         </div>
 
-        <ColorPicker :colors="product.configurableAttributes.color"></ColorPicker>
+        <ColorPicker 
+            :colors="product.configurableAttributes.color">
+        </ColorPicker>
+        
+        <SizePicker 
+            :sizes="product.configurableAttributes.size">
+        </SizePicker>
     </div>
 </template>
 
 <script>
 import ColorPicker from './ColorPicker'
+import SizePicker from './SizePicker'
 
 export default {
     name: 'product-info',
     components: {
-        ColorPicker
+        ColorPicker,
+        SizePicker
     }, 
     props: {
         product: {

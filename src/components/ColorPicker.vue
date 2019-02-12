@@ -43,6 +43,8 @@ export default {
 <style lang="scss" scoped>
 
 .color {
+    margin: 10px 0;
+
     &__title {
         font-size: 1rem;
         font-weight: 500;
