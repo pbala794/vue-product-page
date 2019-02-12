@@ -1,0 +1,110 @@
+{
+  "id": 1713,
+  "sku": "TPO1713",
+  "images": [
+    {
+      "baseUrl": "https://static.topsecret.pl/public/foto/full/TPO1713SZ_1.jpg",
+      "thumbnailUrl": "https://static.topsecret.pl/public/foto/thumb_104x139/TPO1713SZ_1.jpg"
+    },
+    {
+      "baseUrl": "https://static.topsecret.pl/public/foto/full/TPO1713SZ_0.jpg",
+      "thumbnailUrl": "https://static.topsecret.pl/public/foto/thumb_104x139/TPO1713SZ_0.jpg"
+    },
+    {
+      "baseUrl": "https://static.topsecret.pl/public/foto/full/TPO1713SZ_2.jpg",
+      "thumbnailUrl": "https://static.topsecret.pl/public/foto/thumb_104x139/TPO1713SZ_2.jpg"
+    },
+    {
+      "baseUrl": "https://static.topsecret.pl/public/foto/full/TPO1713SZ_3.jpg",
+      "thumbnailUrl": "https://static.topsecret.pl/public/foto/thumb_104x139/TPO1713SZ_3.jpg"
+    },
+    {
+      "baseUrl": "https://static.topsecret.pl/public/foto/full/TPO1713SZ_4.jpg",
+      "thumbnailUrl": "https://static.topsecret.pl/public/foto/thumb_104x139/TPO1713SZ_4.jpg"
+    }
+  ],
+  "name": "T-SHIRT DAMSKI, Z NADRUKIEM",
+  "description": "Podkoszulek damski z limitowanej kolekcji Troll dla topsecret.pl wiosna lato 2019. Bawełniany t-shirt z krótkim rękawkiem wykonany z melanżowej dzianiny. Podkoszulek z krótkim rękawkiem i błyszczącym złotym nadrukiem z przodu. T-shirt idealny na co dzień, dostępny w kolorze szarym (TPO1713SZ). Modelka ma 178 cm wzrostu i prezentuje rozmiar 34.",
+  "url": "\/podkoszulek-damski-bluzka--t-shirt-krotki-rekaw-luzny-na-co-dzien-tpo1713-troll,135345,210,pl-PL.html",
+  "basePriceNet": 32.51,
+  "basePriceGross": 39.99,
+  "configurablePrices": [
+    {
+      "attributeKey": "size",
+      "prices": [
+        {
+          "attributeId": 1,
+          "priceNet": 12.51,
+          "priceGross": 19.99
+        },
+        {
+          "attributeId": 2,
+          "priceNet": 22.51,
+          "priceGross": 29.99
+        },
+        {
+          "attributeId": 3,
+          "priceNet": 32.51,
+          "priceGross": 39.99
+        },
+        {
+          "attributeId": 4,
+          "priceNet": 42.51,
+          "priceGross": 49.99
+        }
+      ]
+    }
+  ],
+  "currency": "PLN",
+  "attributes": [
+    {
+      "key": "collection",
+      "label": "Kolekcja",
+      "value": "NOWA KOLEKCJA"
+    },
+    {
+      "key": "fabric",
+      "label": "Materiał",
+      "value": "Bawełna"
+    },
+    {
+      "key": "pattern",
+      "label": "Wzór",
+      "value": "Stały"
+    }
+  ],
+  "configurableAttributes": {
+    "size": [
+      {
+        "id": 1,
+        "value": "XS"
+      },
+      {
+        "id": 2,
+        "value": "S"
+      },
+      {
+        "id": 3,
+        "value": "M"
+      },
+      {
+        "id": 4,
+        "value": "L"
+      }
+    ],
+    "color": [
+      {
+        "id": 1,
+        "value": "Szary"
+      },
+      {
+        "id": 2,
+        "value": "Biały"
+      },
+      {
+        "id": 3,
+        "value": "Czarny"
+      }
+    ]
+  }
+}
