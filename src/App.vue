@@ -8,13 +8,15 @@
       <Breadcrumbs></Breadcrumbs>
     </div>
 
-    <div class="col-first">
-      <Controls></Controls>
-      <ImagePreview :images="product.images"></ImagePreview>
-    </div>
+    <div class="main-content">
+      <div class="col-first">
+        <Controls></Controls>
+        <ImagePreview :images="product.images"></ImagePreview>
+      </div>
 
-    <div class="col-second">
-
+      <div class="col-second">
+        <ProductInfo :product="product"></ProductInfo>
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +26,7 @@
 import Breadcrumbs from './components/Breadcrumbs'
 import Controls from './components/Controls'
 import ImagePreview from './components/ImagePreview'
+import ProductInfo from './components/ProductInfo'
 
 import axios from 'axios'
 
@@ -32,7 +35,8 @@ export default {
   components: {
     Breadcrumbs,
     Controls,
-    ImagePreview
+    ImagePreview,
+    ProductInfo
   },
   data: () => {
     return {
@@ -71,7 +75,7 @@ export default {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  padding: 10px 15px;
+  padding: 10px 25px;
   height: 100%;
 }
 
@@ -85,12 +89,17 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .col-first {
     width: 60%;
   }
 
   .col-second {
-    width: 40%
+    width: 35%
   }
 }
 

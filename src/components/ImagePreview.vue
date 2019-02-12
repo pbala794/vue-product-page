@@ -44,7 +44,6 @@ export default {
     display: flex;
     flex-direction: column;
     width: 20%;
-    height: 300px;
 
     &__img {
         max-width: 100%;
