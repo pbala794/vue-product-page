@@ -14,11 +14,25 @@
       <div class="col-first">
         <Controls></Controls>
         <ImagePreview :images="product.images"></ImagePreview>
+        <ProductsList :title="'Często kupowane z tym produktem'"
+                      :itemsPerSlide="4">
+        </ProductsList>
       </div>
 
       <div class="col-second">
         <ProductInfo :product="product"></ProductInfo>
         <AddToCart :product="product"></AddToCart>
+        <TrackProduct></TrackProduct>
+        <ProductsList :title="'Inni klienci sprawdzali również'"></ProductsList>
+        <ProductDetails :title="'opis produktu'" 
+                        :isExpanded="true">
+        </ProductDetails>
+        <ProductDetails :title="'opinie klientów'"></ProductDetails>
+        <ProductDetails :title="'wymiary produktu'"></ProductDetails>
+        <ProductDetails :title="'materiał i pielęgnacja'"></ProductDetails>
+        <ProductDetails :title="'czas i koszt dostawy'"></ProductDetails>
+        <ProductDetails :title="'podziel się'"></ProductDetails>
+        <ProductsList :title="'Często kupowane z tym produktem'"></ProductsList>
       </div>
     </div>
   </div>
@@ -32,6 +46,9 @@ import ImagePreview from './components/ImagePreview'
 import ProductInfo from './components/ProductInfo'
 import AddToCart from './components/AddToCart'
 import InfoMessage from './components/InfoMessage'
+import TrackProduct from './components/TrackProduct'
+import ProductsList from './components/ProductsList'
+import ProductDetails from './components/ProductDetails'
 
 import axios from 'axios'
 import { EventBus } from './EventBus.js'
@@ -44,7 +61,10 @@ export default {
     ImagePreview,
     ProductInfo,
     AddToCart,
-    InfoMessage
+    InfoMessage,
+    TrackProduct,
+    ProductsList,
+    ProductDetails
   },
   data: () => {
     return {
@@ -91,7 +111,6 @@ export default {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  margin-bottom: 300px; /* temporary */
   padding: 10px 25px;
   height: 100%;
 }

@@ -91,7 +91,6 @@ $modalWidth: calc(100% - 50px);
         position: fixed;
         z-index: 10;
         top: 20%;
-        left: calc(100vw - $modalWidth);
         width: $modalWidth;
         height: 200px;
         padding-top: 50px;
@@ -132,11 +131,19 @@ $modalWidth: calc(100% - 50px);
 
     &__modal-backdrop {
         position: fixed;
+        z-index: 10;
         left: 0;
         top: 0;
         right: 0;
         bottom: 0;
         background: rgba(0, 0, 0, .7);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cart__confirm-modal {
+        width: 600px;
+        left: calc(50% - 300px);
     }
 }
 
