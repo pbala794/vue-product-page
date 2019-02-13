@@ -7,8 +7,7 @@
         </div>
 
         <div class="product-details__item-content" v-if="showDetails">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Repellat doloribus reprehenderit accusamus id, quae incidunt dolor temporibus quia animi exercitationem!
+            <p>{{ content }}</p>
         </div>
     </div>
 </div>    
@@ -21,6 +20,10 @@ export default {
         title: {
             type: String,
             required: true
+        },
+        content: {
+            type: String,
+            default: 'Brak'
         },
         isExpanded: {
             type: Boolean,
@@ -66,6 +69,8 @@ export default {
 
     &__item-content {
         padding: 10px;
+        text-align: justify;
+        line-height: 1.5rem;
      }
 
     @keyframes expand {

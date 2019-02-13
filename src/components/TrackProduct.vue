@@ -1,8 +1,14 @@
 <template>
     <div class="product-track">
-        <span class="product-track__item">Do schowka</span>
-        <span class="product-track__item">Do listy życzeń</span>
-        <span class="product-track__item">Dostępność w salonach</span>
+        <span class="product-track__item">
+            <i class="fas fa-heart"></i> Do schowka
+        </span>
+        <span class="product-track__item">
+            <i class="fas fa-list-ul"></i> Do listy życzeń
+        </span>
+        <span class="product-track__item">
+            <i class="fas fa-map-marker"></i> Dostępność w salonach
+        </span>
     </div>
 </template>
 
@@ -41,6 +47,10 @@ export default {
 
     &__item:last-child {
         flex: 1;
+    }
+
+    .fas {
+        margin-right: 8px;
     }
 }
 

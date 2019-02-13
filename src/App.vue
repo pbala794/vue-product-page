@@ -15,7 +15,7 @@
         <Controls></Controls>
         <ImagePreview :images="product.images"></ImagePreview>
         <ProductsList :title="'Często kupowane z tym produktem'"
-                      :itemsPerSlide="4">
+                      :itemsPerSlide="3">
         </ProductsList>
       </div>
 
@@ -25,6 +25,7 @@
         <TrackProduct></TrackProduct>
         <ProductsList :title="'Inni klienci sprawdzali również'"></ProductsList>
         <ProductDetails :title="'opis produktu'" 
+                        :content="product.description"
                         :isExpanded="true">
         </ProductDetails>
         <ProductDetails :title="'opinie klientów'"></ProductDetails>
@@ -32,7 +33,6 @@
         <ProductDetails :title="'materiał i pielęgnacja'"></ProductDetails>
         <ProductDetails :title="'czas i koszt dostawy'"></ProductDetails>
         <ProductDetails :title="'podziel się'"></ProductDetails>
-        <ProductsList :title="'Często kupowane z tym produktem'"></ProductsList>
       </div>
     </div>
   </div>
@@ -110,7 +110,7 @@ export default {
   flex-direction: column;
   width: 100%;
   max-width: 1170px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   padding: 10px 25px;
   height: 100%;
 }

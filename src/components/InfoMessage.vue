@@ -13,6 +13,7 @@ export default {
 <style lang="scss" scoped>
     .message-bar {
         position: fixed;
+        z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
